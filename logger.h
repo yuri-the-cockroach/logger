@@ -12,6 +12,8 @@
 #pragma GCC diagnostic ignored "-Wformat-nonliteral"
 #pragma GCC diagnostic ignored "-Wc++98-compat"
 
+#define MAX_MESSAGE_LENGTH 4096
+
 enum loglevel {
     FATAL = 0,
     ERROR = 1,
