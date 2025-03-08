@@ -37,13 +37,13 @@ static const char *loglvlToStringNoColor[] = { "FATAL", "ERROR", "WARN",
                                                "DEBUG", "TRACE" };
 
 static const enum loglevel DEFAULT_LOG_LEVEL = WARN;
+static FILE *BENCH_LOG_FILE_PTR              = 0;
+static FILE *LOG_FILE_PTR                    = 0;
 
 extern enum loglevel CURRENT_LOG_LEVEL_CONSOLE;
 extern enum loglevel CURRENT_LOG_LEVEL_FILE;
 extern bool BENCHMARKING;
-extern FILE *BENCH_LOG_FILE_PTR;
 extern char LOG_FILE_NAME[64];
-extern FILE *LOG_FILE_PTR;
 
 static const char *restrict BENCH_LOG_FILE_NAME = "benchlog.log";
 
