@@ -46,7 +46,6 @@ extern enum loglevel CURRENT_LOG_LEVEL_FILE;
 extern bool BENCHMARKING;
 extern char LOG_FILE_NAME[64];
 
-static const char *restrict BENCH_LOG_FILE_NAME = "benchlog.log";
 
 #define LOG(logLevel, format, ...) Logger(__FILE__, __FUNCTION__, __LINE__, logLevel, format, __VA_ARGS__)
 
