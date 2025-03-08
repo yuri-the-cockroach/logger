@@ -59,6 +59,7 @@ int Logger(const char *restrict inFile, const char *restrict inFunc,
 
 // Function that initializes the logger file and opens it
 int InitLogger(void);
+int CloseLogger(void);
 
 int Logger(const char *restrict inFile, const char *restrict inFunc,
            const int onLine, const enum loglevel loglevel, ...) {
@@ -162,5 +163,9 @@ int InitLogger(void) {
     return 0;
 }
 
+int CloseLogger(void) {
+    if (LOG_FILE_PTR) fclose(LOG_FILE_PTR);
+    if (BENCH_LOG_FILE_PTR) fclose(BENCH_LOG_FILE_PTR);
+}
 
 #endif // LOGGER_H_
