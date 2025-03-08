@@ -9,8 +9,8 @@
 #include <sys/time.h>
 #include <time.h>
 
-#pragma GCC diagnostic ignored "-Wvarargs"
 #pragma GCC diagnostic ignored "-Wformat-nonliteral"
+#pragma GCC diagnostic ignored "-Wc++98-compat"
 
 enum loglevel {
     NOLOG   = 0,
