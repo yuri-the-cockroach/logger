@@ -13,16 +13,14 @@
 #pragma GCC diagnostic ignored "-Wc++98-compat"
 
 enum loglevel {
-    NOLOG   = 0,
-    FATAL   = 1,
-    ERROR   = 2,
-    WARNING = 3,
-    BENCH   = 4,
-    INFO    = 5,
-    FIXME   = 6,
-    DEBUG   = 7,
-    TRACE   = 8,
-    ALL     = 9
+    FATAL = 0,
+    ERROR = 1,
+    WARN  = 2,
+    BENCH = 3,
+    INFO  = 4,
+    FIXME = 5,
+    DEBUG = 6,
+    TRACE = 7,
 };
 
 static const char *loglvlToString[10] = {
