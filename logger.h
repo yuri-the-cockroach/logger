@@ -25,34 +25,19 @@ enum loglevel {
     TRACE = 7,
 };
 
-static const char *loglvlToString[10] = {
-    "NOLOG",
-    "\033[1;31mFATAL\033[0;37m",
-    "\033[0;31mERROR\033[0;37m",
-    "\033[1;33mWARNING\033[0;37m",
-    "\033[0;32mBENCH\033[0;37m",
-    "\033[0;32mINFO\033[0;37m",
-    "\033[0;34mFIXME\033[0;37m",
-    "\033[1;35mDEBUG\033[0;37m",
-    "\033[0;35mTRACE\033[0;37m",
-    "ALL"
+static const char *loglvlToString[] = {
+    "\033[1;31mFATAL\033[0;37m", "\033[0;31mERROR\033[0;37m",
+    "\033[1;33mWARN\033[0;37m",  "\033[0;32mBENCH\033[0;37m",
+    "\033[0;32mINFO\033[0;37m",  "\033[0;34mFIXME\033[0;37m",
+    "\033[1;35mDEBUG\033[0;37m", "\033[0;35mTRACE\033[0;37m"
 };
 
-static const char *loglvlToStringNoColor[10] = {
-    "NOLOG",
-    "FATAL",
-    "ERROR",
-    "WARNING",
-    "BENCH",
-    "INFO",
-    "FIXME",
-    "DEBUG",
-    "TRACE",
-    "ALL"
-};
+static const char *loglvlToStringNoColor[] = { "FATAL", "ERROR", "WARN",
+                                               "BENCH", "INFO",  "FIXME",
+                                               "DEBUG", "TRACE" };
 
+static const enum loglevel DEFAULT_LOG_LEVEL = WARN;
 
-static const enum loglevel DEFAULT_LOG_LEVEL = WARNING;
 extern enum loglevel CURRENT_LOG_LEVEL_CONSOLE;
 extern enum loglevel CURRENT_LOG_LEVEL_FILE;
 extern bool BENCHMARKING;
