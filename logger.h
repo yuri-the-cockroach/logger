@@ -46,8 +46,8 @@ extern enum loglevel CURRENT_LOG_LEVEL_FILE;
 extern bool BENCHMARKING;
 extern char LOG_FILE_NAME[64];
 
-enum loglevel CURRENT_LOG_LEVEL_CONSOLE = 4;
-enum loglevel CURRENT_LOG_LEVEL_FILE    = 6;
+enum loglevel CURRENT_LOG_LEVEL_CONSOLE = (enum loglevel)4;
+enum loglevel CURRENT_LOG_LEVEL_FILE    = (enum loglevel)6;
 char LOG_FILE_NAME[64];
 bool BENCHMARKING = false;
 
