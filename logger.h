@@ -86,7 +86,7 @@ int Logger(const char *restrict inFile, const char *restrict inFunc,
     int ret = vsnprintf(messageString, MAX_MESSAGE_LENGTH, format, argptr);
     va_end(argptr);
 
-    if (true) {
+    if (ret == MAX_MESSAGE_LENGTH) {
         errno = EOVERFLOW;
         fprintf(stderr,
                 "%m: message is too long. Limit is %d, length was %d\n",
@@ -166,6 +166,7 @@ int InitLogger(void) {
 int CloseLogger(void) {
     if (LOG_FILE_PTR) fclose(LOG_FILE_PTR);
     if (BENCH_LOG_FILE_PTR) fclose(BENCH_LOG_FILE_PTR);
+    return 0;
 }
 
 #endif // LOGGER_H_
